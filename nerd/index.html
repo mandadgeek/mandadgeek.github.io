@@ -1,20 +1,20 @@
 ---
 layout: default
 ---
-<h2>NRD Posts</h2>
+<h2>MAN Posts</h2>
 
 <ul>
-  {% for nerd in site.categories.nerd %}
+  {% for man in site.categories.man %}
   <div id="div-wrapper">
     <li>
       <div id="element1">
-        <h3><a href="{{ nerd.url}} ">{{ nerd.title }}</a> by <a href="{{ site.url }}/{{ nerd.author | downcase }}">{{ nerd.author }}</a></h3>
+        <h3><a href="{{ man.url}} ">{{ man.title }}</a> by <a href="{{ site.url }}/{{ man.author | downcase }}">{{ man.author }}</a></h3>
       </div>
       <div id="element2">
-        <strong>{{ nerd.date | date: "%B %e, %Y" }}</strong>
+        <strong>{{ man.date | date: "%B %e, %Y" }}</strong>
       </div>
       <div id="element3">
-        {{ nerd.short }}
+        {{ man.short }}
       </div>
     </li>
   </div>
