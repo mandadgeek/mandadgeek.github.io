@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<h2>MAN Posts</h2>
+
+<ul>
+  {% for man in site.categories.man %}
+  <div id="div-wrapper">
+    <li>
+      <div id="element1">
+        <h3><a href="{{ man.url}} ">{{ man.title }}</a> by <a href="{{ site.url }}/{{ man.author | downcase }}">{{ man.author }}</a></h3>
+      </div>
+      <div id="element2">
+        <strong>{{ man.date | date: "%B %e, %Y" }}</strong>
+      </div>
+      <div id="element3">
+        {{ man.short }}
+      </div>
+    </li>
+  </div>
+  {% endfor %}
+</ul>
