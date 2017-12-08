@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<h2>DAD Posts</h2>
+
+<ul>
+  {% for dad in site.categories.dad %}
+  <div id="div-wrapper">
+    <li>
+      <div id="element1">
+        <h3><a href="{{ dad.url}} ">{{ dad.title }}</a> by <a href="{{ site.url }}/{{ dad.author | downcase }}">{{ dad.author }}</a></h3>
+      </div>
+      <div id="element2">
+        <strong>{{dad.date | date: "%B %e, %Y" }}</strong>
+      </div>
+      <div id="element3">
+        {{ dad.short }}
+      </div>
+    </li>
+  </div>
+  {% endfor %}
+</ul>
