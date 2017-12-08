@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<h2>GEEK Posts</h2>
+
+<ul>
+  {% for geek in site.categories.geek %}
+  <div id="div-wrapper">
+    <li>
+      <div id="element1">
+        <h3><a href="{{ geek.url}} ">{{ geek.title }}</a> by <a href="{{ site.url }}/{{ geek.author | downcase }}">{{ geek.author }}</a></h3>
+      </div>
+      <div id="element2">
+        <strong>{{geek.date | date: "%B %e, %Y" }}</strong>
+      </div>
+      <div id="element3">
+        {{ geek.short }}
+      </div>
+    </li>
+  </div>
+  {% endfor %}
+</ul>
